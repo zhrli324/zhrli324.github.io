@@ -169,14 +169,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/Getting-Started/" style="color: #ffa2c4">
+                <a href="/tags/Getting-Started/" style="color: #00a596">
                     Getting_Started
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Python/" style="color: #ff7d73">
+                <a href="/tags/Python/" style="color: #ffa2c4">
                     Python
                 </a>
             </span>
@@ -216,15 +216,16 @@ print(x)
 &gt;&gt;&gt; print(a)
 &gt;&gt;&gt; None
 </code></pre>
-<p>operator 操作符</p>
-<p>operand 操作数</p>
-<p>assignment 赋值</p>
 <p>formal parameters 形参(即函数定义中引用说明的参数)</p>
 <p>环境(environment)由一系列框架(frame)组成，任意一个name被调用时从<strong>环境中最先找到这个name的框架</strong>中取值</p>
 <p>变量名称有作用范围，不同frame中有全局变量、局部变量</p>
-<p>若想在函数体中使用全局变量，</p>
-<p>local frame 排在 local frame 前面</p>
+<p>同时只能运行唯一一个frame，其他frame的命令会暂停</p>
+<p>若想在函数体中使用全局变量，可以先将全局变量赋值给局部变量</p>
+<p>frame之间有着从属、并列关系，如全局frame是local frame(即函数)的父框架，子框架屏蔽父框架(local frame 排在前面)，这与全局变量和局部变量有相同的道理</p>
 <p>pure function(只有返回值的函数)；num-pure function(会对解释器或程序造成影响的函数，如print)</p>
+<p>operator 操作符</p>
+<p>operand 操作数</p>
+<p>assignment 赋值</p>
 
     </div>
     
