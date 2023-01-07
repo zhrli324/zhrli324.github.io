@@ -169,28 +169,28 @@
             
             <span class="tag">
                 
-                <a href="/tags/Getting-Started/" style="color: #03a9f4">
+                <a href="/tags/Getting-Started/" style="color: #00a596">
                     Getting_Started
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Python/" style="color: #00bcd4">
+                <a href="/tags/Python/" style="color: #ffa2c4">
                     Python
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Machine-Learning/" style="color: #00a596">
+                <a href="/tags/Machine-Learning/" style="color: #ffa2c4">
                     Machine_Learning
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/PaddlePaddle/" style="color: #00bcd4">
+                <a href="/tags/PaddlePaddle/" style="color: #ff7d73">
                     PaddlePaddle
                 </a>
             </span>
@@ -200,7 +200,7 @@
     </div>
     
     <div class="content" v-pre>
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本人完全人工智能领域小白。近日有需求使用<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/">PaddlePaddle</a>框架，运用图像识别中的行人影响追踪技术，折腾了大半天，中途踩了不少坑，才将基本的环境配置好。经验证，网上有些教学博客的方法已经过时，于是写一篇博客，帮助和我一样什么也不懂的技术小白们，体验最基础的图像识别框架的构建。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本人人工智能领域小白。近日有需求使用<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/">PaddlePaddle</a>框架，运用图像识别中的行人影响追踪技术，折腾了大半天，中途踩了不少坑，才将基本的环境配置好。经验证，网上有些教学博客的方法已经过时，于是写一篇博客，帮助和我一样什么也不懂的技术小白们，体验最基础的图像识别框架的构建。</p>
 <p><strong>本文以64位x86架构Windows 11系统，Python3.9.13为例</strong>。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/install/quick?docurl=/documentation/docs/zh/install/conda/windows-conda.html">Paddlepaddle官方安装教程</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/documentation/docs/zh/guides/index_cn.html">Paddlepaddle官方文档</a></p>
@@ -334,7 +334,7 @@ pip install -r requirements.txt
 </ul>
 <h2 id="遇到的问题与解决措施"><a href="#遇到的问题与解决措施" class="headerlink" title="遇到的问题与解决措施"></a>遇到的问题与解决措施</h2><ol>
 <li><p>我曾经同时安装了两个版本的Python，将环境配置得一塌糊涂，于是采用了全部清空重装的措施。</p>
-<p> <a target="_blank" rel="noopener" href="https://anaconda.org.cn/anaconda/install/uninstall/">Anaconda卸载指南</a><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/article/10855071.html">Python卸载指南</a></p>
+<p> ​                    <a target="_blank" rel="noopener" href="https://anaconda.org.cn/anaconda/install/uninstall/">Anaconda卸载指南</a>                                          <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/article/10855071.html">Python卸载指南</a></p>
 <p> 但当我重新安装上Anaconda并试着使用<code>python --version</code>检测安装时，命令行什么都没返回。上网一查，我的问题出现在安装了多个版本的Python上，但先前我已经卸载了Python，在”程序与功能”面板上也无法找到Python。于是使用<code>where python</code>命令，找到了python的路径，发现真的是之前的Python没有卸载干净，将其删除就可以了。但是之前的python.exe位于我的<code>C:\Users\zhrli\AppData\Local\Microsoft\WindowsApps</code>路径中，直接删除会出现以下报错</p>
 <p> ​                                     <img src="/2023/01/07/PaddleDetection%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C/3.png" alt="3"></p>
 <p> 所以我又从网上查询到了解决方法。在拥有管理员权限的命令行中使用如下指令</p>
