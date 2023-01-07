@@ -169,28 +169,28 @@
             
             <span class="tag">
                 
-                <a href="/tags/Getting-Started/" style="color: #00bcd4">
+                <a href="/tags/Getting-Started/" style="color: #03a9f4">
                     Getting_Started
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Python/" style="color: #03a9f4">
+                <a href="/tags/Python/" style="color: #00bcd4">
                     Python
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/Machine-Learning/" style="color: #ff7d73">
+                <a href="/tags/Machine-Learning/" style="color: #00a596">
                     Machine_Learning
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/PaddlePaddle/" style="color: #03a9f4">
+                <a href="/tags/PaddlePaddle/" style="color: #00bcd4">
                     PaddlePaddle
                 </a>
             </span>
@@ -259,7 +259,7 @@ conda config --set show_channel_urls yes
 <p>简而言之，Jupyter Notebook是以网页的形式打开，可以在网页页面中<strong>直接编写代码</strong>和<strong>运行代码</strong>，代码的<strong>运行结果</strong>也会直接在代码块下显示的程序。如在编程过程中需要编写说明文档，可在同一个页面中直接编写，便于作及时的说明和解释。</p>
 </blockquote>
 <p>Anaconda的默认环境自带Jupyter，但paddle环境并没有，所以先安装Jupyter库</p>
-<pre><code>pip3 install jupyter
+<pre><code>pip install jupyter
 </code></pre>
 <p>在paddle环境的终端中输入<code>jupyter notebook</code>可进入Jupyter <img src="/2023/01/07/PaddleDetection%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C/9.png" alt="9"></p>
 <h2 id="Paddle-Detection的安装"><a href="#Paddle-Detection的安装" class="headerlink" title="Paddle Detection的安装"></a>Paddle Detection的安装</h2><p><strong>本文以<a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleDetection">PaddleDetection</a>中的一个pipeline——<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=11">PP-HumanV2</a>为例</strong></p>
@@ -278,18 +278,12 @@ pip install -r requirements.txt
 <p>接下来使用Jupyter运行。打开Jupyter并进入<code>C:\Users\用户名\work\PaddleDetection</code>中，右上角创建新Python3文件 <img src="/2023/01/07/PaddleDetection%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C/10.png" alt="10"></p>
 <p><strong>注:Jupyter的使用说明详见<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/75402607">Jupyter notebook 入门教程</a>等，此处不再赘述</strong></p>
 <h2 id="配置与使用"><a href="#配置与使用" class="headerlink" title="配置与使用"></a>配置与使用</h2><ul>
-<li><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4></li>
-</ul>
-<p>PP-Human的配置文件在<code>C:\Users\zhrli\work\PaddleDetection\deploy\pipeline\config\infer_cfg_pphuman.yml</code>，可通过修改配置文件来改变功能。配置文件的编辑详见<a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.5/deploy/pipeline/docs/tutorials">https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.5/deploy/pipeline/docs/tutorials</a></p>
-<ul>
-<li><h4 id="导入训练模型"><a href="#导入训练模型" class="headerlink" title="导入训练模型"></a>导入训练模型</h4></li>
-</ul>
-<p>下载<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=11%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%B0%86%E5%85%B6%E8%A7%A3%E5%8E%8B%E8%87%B3./output_inference%E6%96%87%E4%BB%B6%E5%A4%B9(%E6%B2%A1%E6%9C%89%E5%B0%B1%E6%96%B0%E5%BB%BA)">https://www.paddlepaddle.org.cn/modelsDetail?modelId=11中的模型，将其解压至./output_inference文件夹(没有就新建)</a></p>
-<ul>
-<li><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4></li>
-</ul>
-<p>以下为几组示例，引用自<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=11">https://www.paddlepaddle.org.cn/modelsDetail?modelId=11</a></p>
-<pre><code class="python">#直接使用默认配置或者examples中配置文件，或者直接在`infer_cfg_pphuman.yml`中修改配置：
+<li><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>  PP-Human的配置文件在<code>C:\Users\zhrli\work\PaddleDetection\deploy\pipeline\config\infer_cfg_pphuman.yml</code>，可通过修改配置文件来改变功能。配置文件的编辑详见<a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.5/deploy/pipeline/docs/tutorials">https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.5/deploy/pipeline/docs/tutorials</a></p>
+</li>
+<li><h4 id="导入训练模型"><a href="#导入训练模型" class="headerlink" title="导入训练模型"></a>导入训练模型</h4><p>  下载<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=11%E4%B8%AD%E7%9A%84%E6%A8%A1%E5%9E%8B%EF%BC%8C%E5%B0%86%E5%85%B6%E8%A7%A3%E5%8E%8B%E8%87%B3./output_inference%E6%96%87%E4%BB%B6%E5%A4%B9(%E6%B2%A1%E6%9C%89%E5%B0%B1%E6%96%B0%E5%BB%BA)">https://www.paddlepaddle.org.cn/modelsDetail?modelId=11中的模型，将其解压至./output_inference文件夹(没有就新建)</a></p>
+</li>
+<li><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>  以下为几组示例，引用自<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=11">https://www.paddlepaddle.org.cn/modelsDetail?modelId=11</a></p>
+<pre><code class="python">#直接使用默认配置或者examples中配置文件，或者直接在`infer_cfg_pphuman.yml`中	修改配置：
 
 # 例：行人检测，指定配置文件路径和测试图片，图片输入默认打开检测模型
 !wget -P demo_input -N https://paddledet.bj.bcebos.com/modelcenter/images/PP-Human/human_attr.jpg 
@@ -336,19 +330,20 @@ pip install -r requirements.txt
 <li>若用GPU加载，应将CPU改为GPU</li>
 <li>待处理的视频与图片文件应放在<code>C:\Users\用户名\work\PaddleDetection\demo_input</code>文件夹中，输出在<code>C:\Users\用户名\work\PaddleDetection\demo_output</code>文件夹中</li>
 </ol>
+</li>
+</ul>
 <h2 id="遇到的问题与解决措施"><a href="#遇到的问题与解决措施" class="headerlink" title="遇到的问题与解决措施"></a>遇到的问题与解决措施</h2><ol>
-<li>我曾经同时安装了两个版本的Python，将环境配置得一塌糊涂，于是采用了全部清空重装的措施。</li>
-</ol>
-<p>  ​                     <a target="_blank" rel="noopener" href="https://anaconda.org.cn/anaconda/install/uninstall/">Anaconda卸载指南</a>                                         <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/article/10855071.html">Python卸载指南</a></p>
-<p>  但当我重新安装上Anaconda并试着使用<code>python --version</code>检测安装时，命令行什么都没返回。上网一查，我的问题出现在安装了多个版本的Python上，但先前我已经卸载了Python，在”程序与功能”面板上也无法找到Python。于是使用<code>where python</code>命令，找到了python的路径，发现真的是之前的Python没有卸载干净，将其删除就可以了。但是之前的python.exe位于我的<code>C:\Users\zhrli\AppData\Local\Microsoft\WindowsApps</code>路径中，直接删除会出现以下报错</p>
-<p>  <img src="/2023/01/07/PaddleDetection%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C/3.png" alt="3"></p>
-<p>  所以我又从网上查询到了解决方法。在拥有管理员权限的命令行中使用如下指令</p>
+<li><p>我曾经同时安装了两个版本的Python，将环境配置得一塌糊涂，于是采用了全部清空重装的措施。</p>
+<p> <a target="_blank" rel="noopener" href="https://anaconda.org.cn/anaconda/install/uninstall/">Anaconda卸载指南</a><a target="_blank" rel="noopener" href="https://www.w3cschool.cn/article/10855071.html">Python卸载指南</a></p>
+<p> 但当我重新安装上Anaconda并试着使用<code>python --version</code>检测安装时，命令行什么都没返回。上网一查，我的问题出现在安装了多个版本的Python上，但先前我已经卸载了Python，在”程序与功能”面板上也无法找到Python。于是使用<code>where python</code>命令，找到了python的路径，发现真的是之前的Python没有卸载干净，将其删除就可以了。但是之前的python.exe位于我的<code>C:\Users\zhrli\AppData\Local\Microsoft\WindowsApps</code>路径中，直接删除会出现以下报错</p>
+<p> ​                                     <img src="/2023/01/07/PaddleDetection%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C/3.png" alt="3"></p>
+<p> 所以我又从网上查询到了解决方法。在拥有管理员权限的命令行中使用如下指令</p>
 <pre><code>rd /s/q 文件夹路径  （强制删除文件文件夹和文件夹内所有文件）
 del /f/s/q 文件路径  （强制删除文件，文件名必须加文件后缀名）
 </code></pre>
-<p>  此命令可以强制删除文件(详见博客<a target="_blank" rel="noopener" href="https://blog.csdn.net/liangshao_fisher/article/details/116157801">windows删除文件报错《0x80070780系统无法访问此文件》</a>)</p>
-<p>  将python.exe和python3.exe删除后，python可以正常运行了</p>
-<ol start="2">
+<p> 此命令可以强制删除文件(详见博客<a target="_blank" rel="noopener" href="https://blog.csdn.net/liangshao_fisher/article/details/116157801">windows删除文件报错《0x80070780系统无法访问此文件》</a>)</p>
+<p> 将python.exe和python3.exe删除后，python可以正常运行了</p>
+</li>
 <li><p>装Anaconda时报错<code>Solving environment: failed with initial frozen solve. Retrying with flexible solve.</code></p>
 <p> 解决方法：</p>
 <pre><code># 更新conda
