@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Markdown Intro | Zhrli&#39;s Blog</title>
+        <meta name="author" content="zhrli">
+        <meta name="description" content="欲买桂花同载酒，终不似，少年游。">
+        <meta name="keywords" content="">
+        <link rel="icon" href="ailor.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script>
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+        <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css">
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features="></script>
+        
+        
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0.3s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+    <div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+        <div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+            <div>
+                <h2>LOADING...</h2>
+                <p style="word-break:keep-all">加载过慢请开启缓存（浏览器默认开启）</p>
+                <div>
+                    <img alt="loading" src="/loading.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="showpage" style="display: -not-none">
+                    <div id="menushow">
+                        <nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">zhrli's Blog</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menushow" id="phone-menu">
+        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
+        <div class="title" @click="menushow = !menushow">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;zhrli's Blog</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menushow">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                    </div>
+                    <div id="main">
+                        <div class="article">
+    <div>
+        <h1>Markdown Intro </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/12/31
+        </span>
+        
+        <span class="category">
+            <a href="/categories/MarkdownIntro/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                MarkdownIntro
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Getting-Started/" style="color: #ff7d73">
+                    Getting_Started
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Markdown/" style="color: #00a596">
+                    Markdown
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="Markdown-Introduction"><a href="#Markdown-Introduction" class="headerlink" title="Markdown Introduction"></a>Markdown Introduction</h1><h3 id="Part1-基础语法"><a href="#Part1-基础语法" class="headerlink" title="Part1.基础语法"></a>Part1.基础语法</h3><p><strong>以下符号均可叠加使用</strong></p>
+<p>两行中间一定要有回车!（Typora已经自动隔行）</p>
+<p><code>\</code> 反斜杠 转义字符 使符号不带特殊含义</p>
+<h6 id="多级标题-加大加粗-越多字号越小"><a href="#多级标题-加大加粗-越多字号越小" class="headerlink" title="# 多级标题(加大加粗) # 越多字号越小"></a><code>#</code> 多级标题(加大加粗) <code>#</code> 越多字号越小</h6><p><code>*content* 或 _content_</code> <em>斜体</em> <em>斜体</em></p>
+<p><code>**content** 或 __content__</code> <strong>粗体</strong> <strong>粗体</strong></p>
+<p><code>==content==</code> &#x3D;&#x3D;高亮内容&#x3D;&#x3D;</p>
+<blockquote>
+<p><code>&gt; content</code> 块引用</p>
+<blockquote>
+<p><code>&gt;&gt; content</code> 嵌套块引用</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>第一项<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+</li>
+<li>第二项</li>
+<li>第三项  有序列表</li>
+</ol>
+<ul>
+<li><code> - 或 + 或 * content</code> 前面加点 无序列表</li>
+</ul>
+<p><code> ~~content~~</code> <del>删除线</del></p>
+<p><code>&lt;u&gt;content&lt;/u&gt;</code> <u>下划线</u></p>
+<ul>
+<li><input checked disabled type="checkbox"> 任务列表  <code> - [ ] content</code> <code> - [x] content</code></li>
+</ul>
+<p><code>`content`</code> 代码</p>
+<p><code>                  </code> 四个空格缩进 代码块（不适用于Typora）</p>
+<pre><code class="markdown">``` 三个反引号+语言名  代码块（Typora）
+</code></pre>
+<p><code>*** 或 --- 或 ___</code> 分割线</p>
+<hr>
+<p><code>[超链接](www.baidu.com &quot;提示语&quot;)</code> <a target="_blank" rel="noopener" href="https://markdown.com.cn/" title="学习Markdown">Markdown官方教程</a></p>
+<p><code>&lt;www.链接.com&gt; &lt;电子邮件@markdown.com&gt;</code> 可访问链接 <a target="_blank" rel="noopener" href="https://markdown.com.cn/">https://markdown.com.cn</a>   <a href="mailto:&#122;&#104;&#x72;&#x6c;&#x69;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#109;">&#122;&#104;&#x72;&#x6c;&#x69;&#64;&#x6f;&#x75;&#x74;&#108;&#x6f;&#111;&#x6b;&#x2e;&#99;&#111;&#109;</a></p>
+<p><code>![图片](图片链接或地址 &quot;图片提示&quot;)</code> <img src="https://th.bing.com/th/id/OIP.RrjHIVu4vCdt38RDOpOiWwHaHU?pid=ImgDet&rs=1" alt="示例" title="小埋"></p>
+<p><code>[![图片](图片链接或地址 &quot;图片提示&quot;)](点击图片跳转的链接.com)</code> <a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/%E8%8E%AB%E5%A6%AE%E5%8D%A1(%E5%BF%83%E8%B7%B3%E6%96%87%E5%AD%A6%E9%83%A8)#"><img src="https://th.bing.com/th/id/R.cceac28b283fcb8ba1c98509cdac9f07?rik=jqMJ1Tt2pT3Iuw&riu=http://n.sinaimg.cn/translate/w1366h768/20171218/o6b_-fypsqka9081379.png&ehk=LdysOwaub1lukxsLvIXfId0pwxRPLMIQfU2DG4dThxE=&risl=&pid=ImgRaw&r=0" alt="示例" title="Monika"></a></p>
+<p><code>[^1]</code> 百度<a href="www.baidu.com">^1</a> 谷歌<a href="www.google.com">^2</a> 角注与文末引用</p>
+<p><code>:emoji:</code> 引用emoji表情  :rofl::point_right::clown_face:</p>
+<h3 id="Part2-表格与图像"><a href="#Part2-表格与图像" class="headerlink" title="Part2.表格与图像"></a>Part2.表格与图像</h3><pre><code class="example">| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        | 产生表格：
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody></table>
+<pre><code class="text">| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: | 冒号：左对齐，右对齐，中心对齐
+| Header      | Title       | Here&#39;s this   |
+| Paragraph   | Text        | And more      |
+</code></pre>
+<h3 id="以下是用mermaid实现的图像示例"><a href="#以下是用mermaid实现的图像示例" class="headerlink" title="以下是用mermaid实现的图像示例"></a>以下是用mermaid实现的图像示例</h3><p>1、横向流程图源码格式：</p>
+<pre><code class="mermaid">graph LR
+A[方形] --&gt;B(圆角)
+    B --&gt; C&#123;条件a&#125;
+    C --&gt;|a=1| D[结果1]
+    C --&gt;|a=2| E[结果2]
+    F[横向流程图]
+</code></pre>
+<p>2、竖向流程图源码格式：</p>
+<pre><code class="mermaid">graph TD
+A[方形] --&gt; B(圆角)
+    B --&gt; C&#123;条件a&#125;
+    C --&gt; |a=1| D[结果1]
+    C --&gt; |a=2| E[结果2]
+    F[竖向流程图]
+</code></pre>
+<p>3、标准流程图源码格式：</p>
+<pre><code class="flow">st=&gt;start: 开始框
+op=&gt;operation: 处理框
+cond=&gt;condition: 判断框(是或否?)
+sub1=&gt;subroutine: 子流程
+io=&gt;inputoutput: 输入输出框
+e=&gt;end: 结束框
+st-&gt;op-&gt;cond
+cond(yes)-&gt;io-&gt;e
+cond(no)-&gt;sub1(right)-&gt;op
+</code></pre>
+<p>4、标准流程图源码格式（横向）：</p>
+<pre><code class="flow">st=&gt;start: 开始框
+op=&gt;operation: 处理框
+cond=&gt;condition: 判断框(是或否?)
+sub1=&gt;subroutine: 子流程
+io=&gt;inputoutput: 输入输出框
+e=&gt;end: 结束框
+st(right)-&gt;op(right)-&gt;cond
+cond(yes)-&gt;io(bottom)-&gt;e
+cond(no)-&gt;sub1(right)-&gt;op
+</code></pre>
+<p>5、UML时序图源码样例：</p>
+<pre><code class="sequence">对象A-&gt;对象B: 对象B你好吗?（请求）
+Note right of 对象B: 对象B的描述
+Note left of 对象A: 对象A的描述(提示)
+对象B--&gt;对象A: 我很好(响应)
+对象A-&gt;对象B: 你真的好吗？
+</code></pre>
+<p>6、UML时序图源码复杂样例：</p>
+<pre><code class="sequence">Title: 标题：复杂使用
+对象A-&gt;对象B: 对象B你好吗?（请求）
+Note right of 对象B: 对象B的描述
+Note left of 对象A: 对象A的描述(提示)
+对象B--&gt;对象A: 我很好(响应)
+对象B-&gt;小三: 你好吗
+小三--&gt;&gt;对象A: 对象B找我了
+对象A-&gt;对象B: 你真的好吗？
+Note over 小三,对象B: 我们是朋友
+participant C
+Note right of C: 没人陪我玩
+</code></pre>
+<p>7、UML标准时序图样例：</p>
+<pre><code class="mermaid">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头
+  sequenceDiagram
+    participant 张三
+    participant 李四
+    张三-&gt;王五: 王五你好吗？
+    loop 健康检查
+        王五-&gt;王五: 与疾病战斗
+    end
+    Note right of 王五: 合理 食物 &lt;br/&gt;看医生...
+    李四--&gt;&gt;张三: 很好!
+    王五-&gt;李四: 你怎么样?
+    李四--&gt;王五: 很好!
+</code></pre>
+<p>8、甘特图样例：</p>
+<pre><code class="mermaid">%% 语法示例
+        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2014-01-06,2014-01-08
+        原型                      :active,  des2, 2014-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2014-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h
+</code></pre>
+<h3 id="Part3-LaTeX数学公式"><a href="#Part3-LaTeX数学公式" class="headerlink" title="Part3.LaTeX数学公式"></a>Part3.LaTeX数学公式</h3><p>形如<strong>\vec{a}<strong>的公式也可以写成</strong>\vec a</strong></p>
+<p>^ 上标	_ 下标</p>
+<p>$$<br>x^2		x_1<br>$$</p>
+<p>\frac{分子}{分母} 或者 分子 \over 分母	分数</p>
+<p>$$<br>\frac{a}{b}<br>$$</p>
+<p>\sqrt[n]{x}	x的n次方根	</p>
+<p>$$<br>\sqrt[n]{x}<br>$$</p>
+<p><strong>()[]能直接显示，{}需要用<code>\</code>转义</strong></p>
+<p>\left(content\right)	加大括号</p>
+<p>$$<br>\left(\sqrt[3]{1 \over 2}\right)^2<br>$$</p>
+<p>\vec{a}  向量<br>$$<br>\vec{a}<br>$$<br>\int_{down}^{up} 公式  定积分	\int 公式  不定积分<br>$$<br>\int_{a}^{b} x^2dx\int 2x^3dx<br>$$<br>\lim_{x\rightarrow+\infty}  极限  \rightarrow右箭头  \infty无穷大<br>$$<br>\lim_{x\rightarrow+\infty}\frac{1}{x} &#x3D; 0<br>$$<br>\sum_{i&#x3D;1}^n 累加(1加到n)<br>$$<br>\sum_{i&#x3D;1}^n<br>$$<br>\prod_{i&#x3D;1}^n 累乘(1乘到n)<br>$$<br>\prod_{i&#x3D;1}^n<br>$$<br>\coprod 累除号<br>$$<br>\coprod<br>$$</p>
+<p>\ldots 底线省略号	\cdots 中线省略号	\vdots 列省略号	\ddots 斜省略号<br>$$<br>x_1,x_2,\ldots 1,2,\cdots n,\vdots,\ddots<br>$$<br>\cdot 点乘号<br>$$<br>\vec{a} \cdot \vec{b} &#x3D; 0<br>$$<br>\not&#x3D; 不等于号<br>$$<br>\not&#x3D;<br>$$<br>\approx 约等于号<br>$$<br>\approx<br>$$<br>\leq 小于等于号<br>$$<br>\leq<br>$$<br>\geq 大于等于号<br>$$<br>\geq<br>$$<br>\times 乘号<br>$$<br>\times<br>$$<br>\div 除号<br>$$<br>\div<br>$$<br>\pm 正负号<br>$$<br>\pm<br>$$<br>\overline{公式} 平均值<br>$$<br>\overline{1+2+3+4} &#x3D; 2.5<br>$$<br>\bot 垂直	\angle角	30^\circ 30度<br>$$<br>\bot\angle A&#x3D;30^\circ<br>$$<br>\sin \cos \tan \cot \sec \csc 三角函数<br>$$<br>\sin x \cos x \tan x \cot x \sec x \csc x<br>$$<br>\infty 无穷大 \int 积分 \iint 双重积分 \iiint 三重积分 \oint 曲线积分<br>$$<br>\infty \int \iint \iiint \oint<br>$$<br>x\prime 求导<br>$$<br>x\prime x\prime\prime<br>$$<br>\log_{底数}{真数} 对数	\lg 常用对数	\ln 自然对数<br>$$<br>\log_{底数}{真数} \lg \ln<br>$$<br>\emptyset 空集	\in 属于	\notin 不属于<br>$$<br>\emptyset \in \notin<br>$$<br>\supset 真包含	\supseteq 包含	\iff 等价<br>$$<br>\supset \supseteq \iff<br>$$<br>\bigcap 交集	\bigcup 并集	\bigvee 逻辑或	\bigwedge 逻辑与<br>$$<br>\bigcap \bigcup \bigvee \bigwedge<br>$$<br>\alpha \Alpha 大小写希腊字母<br>$$<br>\alpha \Alpha<br>$$</p>
+<p><img src="https://weiguozhao.github.io/posts_res/2017-12-12-latex/10.png" alt="Greek Alphabet" title="希腊字母表"></p>
+<p><strong>生成矩阵</strong></p>
+<pre><code class="latex">\left\&#123;
+\begin&#123;matrix&#125;
+a_&#123;11&#125; &amp; a_&#123;12&#125; &amp; a_&#123;13&#125; \\
+a_&#123;21&#125; &amp; a_&#123;22&#125; &amp; a_&#123;23&#125; \\
+a_&#123;31&#125; &amp; a_&#123;32&#125; &amp; a_&#123;33&#125;
+\end&#123;matrix&#125;
+\right\&#125; \tag&#123;1&#125;
+</code></pre>
+<p> tag是右边的公式编号,别忘了输出大花括号要\left<strong>\</strong> 或改成<code>&#123;Bmatrix&#125;</code><br>$$<br>\left{<br>\begin{matrix}<br>a_{11} &amp; a_{12} &amp; a_{13} \<br>a_{21} &amp; a_{22} &amp; a_{23} \<br>a_{31} &amp; a_{32} &amp; a_{33}<br>\end{matrix}<br>\right}</p>
+<p>\begin{Bmatrix}<br>a_{11} &amp; a_{12} &amp; a_{13} \<br>a_{21} &amp; a_{22} &amp; a_{23} \<br>a_{31} &amp; a_{32} &amp; a_{33}<br>\end{Bmatrix}<br>\tag{1}<br>$$<br>类似，大中括号为<code>\left[content\right]</code> 或改成<code>&#123;bmatrix&#125;</code><br>$$<br>\left[<br> \begin{matrix}<br>   1 &amp; 2 &amp; 3 \<br>   4 &amp; 5 &amp; 6 \<br>   7 &amp; 8 &amp; 9<br>  \end{matrix}<br>  \right]<br>   \begin{bmatrix}<br>   1 &amp; 2 &amp; 3 \<br>   4 &amp; 5 &amp; 6 \<br>   7 &amp; 8 &amp; 9<br>  \end{bmatrix}<br>  \tag{2}<br>$$<br>大小括号为<code>\left(content\right)</code><br>$$<br>\left(<br> \begin{matrix}<br>   1 &amp; 2 &amp; 3 \<br>   4 &amp; 5 &amp; 6 \<br>   7 &amp; 8 &amp; 9<br>  \end{matrix}<br>  \right) \tag{3}<br>$$<br>行列式为<code>&#123;vmatrix&#125;</code><br>$$<br>\begin{vmatrix}<br>a_{11} &amp; a_{12} &amp; a_{13} \<br>a_{21} &amp; a_{22} &amp; a_{23} \<br>a_{31} &amp; a_{32} &amp; a_{33}<br>\end{vmatrix}<br>\tag{4}<br>$$</p>
+<pre><code class="latex">\begin&#123;cases&#125; 
+公式一\\
+公式二\\
+公式三
+\end&#123;cases&#125;
+</code></pre>
+<p>$$<br>y :<br>\begin{cases}<br>x+y&#x3D;1\<br>x-y &#x3D; 0<br>\end{cases}<br>$$</p>
+<p><code>&amp;</code> 上下对齐</p>
+<pre><code class="latex">\begin&#123;aligned&#125;
+a &amp; = b + c \\
+  &amp; = d + e + f
+\end&#123;aligned&#125;
+</code></pre>
+<p>$$<br>\begin{aligned}<br>a &amp; &#x3D; b + c \<br>  &amp; &#x3D; d + e + f<br>\end{aligned}<br>$$</p>
+<pre><code class="latex">f(n) =
+\begin&#123;cases&#125; 
+n/2,  &amp; \text&#123;if &#125;n\text&#123; is even&#125; \\
+3n+1, &amp; \text&#123;if &#125;n\text&#123; is odd&#125;
+\end&#123;cases&#125;
+</code></pre>
+<p>$$<br>f(n) &#x3D;<br>\begin{cases}<br>n&#x2F;2,  &amp; \text{if }n\text{ is even} \<br>3n+1, &amp; \text{if }n\text{ is odd}<br>\end{cases}<br>$$</p>
+<pre><code class="latex">\!紧贴 \,小空格 \;中空格 \ 空格 \quad 真空格 \qquad 双真空格
+</code></pre>
+<p>$$<br>a!b;a,b;a;b;a\ b;a\quad b;a\qquad b;<br>$$</p>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+                        <footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2023 zhrli&#39;s Blog
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @zhrli
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+
+                    </div>
+                </div>
+            </transition>
+            <div id="showimg">
+                <img id="showimg-content" alt="showimg">
+            </div>
+        </div>
+        <script src="/js/functions.js"></script>
+<script src="/js/particlex.js"></script>
+
+    
+    
+    
+    
+
+
+    </body>
+</html>
