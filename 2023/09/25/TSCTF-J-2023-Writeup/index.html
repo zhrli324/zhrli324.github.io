@@ -169,7 +169,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Getting-Started/" style="color: #ff7d73">
+                <a href="/tags/Getting-Started/" style="color: #ffa2c4">
                     Getting_Started
                 </a>
             </span>
@@ -184,7 +184,7 @@
 <p><del>就做出来了这几道，权当忙里偷闲了</del></p>
 <h2 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h2><h3 id="尊嘟假嘟"><a href="#尊嘟假嘟" class="headerlink" title="尊嘟假嘟"></a>尊嘟假嘟</h3><p>下载下来是一段重复<strong>尊嘟</strong>和<strong>假嘟</strong>的音频，只有两种不同的信号，于是联想到<strong>摩斯码</strong>。试着将尊嘟和假嘟分别当作<code>.</code>和<code>-</code>，翻译成字符得出flag。</p>
 <h3 id="Get-the-file-on-blockchain"><a href="#Get-the-file-on-blockchain" class="headerlink" title="Get the file on blockchain"></a>Get the file on blockchain</h3><p>题干里给了个关键词<em><strong>IPFS文件</strong></em>，bing一下，发现这是一个点对点的超媒体协议，可以用来传输文件，进一步找到了<a target="_blank" rel="noopener" href="https://gateway.ipfs.io/ipfs/">https://gateway.ipfs.io/ipfs/</a>这一个查询文件的域名，<code>/</code>后面加上文件的hash值便可访问文件。</p>
-<p>题干里给了一个<strong>multi_hash</strong>，经过查阅资料，得知IPFS的hash是在multihash上再使用Base58编码，写脚本将其解码便可得到一个IPFS的hash值<code>QmeBzJtRrENPMbsXmueBpA6KB9wgsioRPwLF3WVMdHZRz2</code>，访问上述网站后得到flag。<img src="https://gateway.ipfs.io/ipfs/QmeBzJtRrENPMbsXmueBpA6KB9wgsioRPwLF3WVMdHZRz2" alt="https://gateway.ipfs.io/ipfs/QmeBzJtRrENPMbsXmueBpA6KB9wgsioRPwLF3WVMdHZRz2"></p>
+<p>题干里给了一个<strong>multi_hash</strong>，经过查阅资料，得知IPFS的hash是在multihash上再使用Base58编码，写脚本将其解码便可得到一个IPFS的hash值<code>QmeBzJtRrENPMbsXmueBpA6KB9wgsioRPwLF3WVMdHZRz2</code>，访问上述网站后得到flag。</p>
 <h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="十年之约"><a href="#十年之约" class="headerlink" title="十年之约"></a>十年之约</h3><p>纯暴力破解。<del>对web一窍不通，又看hint说答对五十次给flag，所以随便填了一个答案就按着enter不放，等成功到50次就得到了flag。</del></p>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h3><p>看酒杯和月亮瞎猜。</p>
 <h3 id="music"><a href="#music" class="headerlink" title="music"></a>music</h3><p>看这题目的描述，第一时间就想到了校歌(?)</p>
