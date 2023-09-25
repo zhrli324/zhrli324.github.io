@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Matepad Paper使用感受 | Zhrli&#39;s Blog</title>
+        <meta name="author" content="zhrli">
+        <meta name="description" content="欲买桂花同载酒，终不似，少年游。">
+        <meta name="keywords" content="">
+        <link rel="icon" href="ailor.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script>
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+        <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css">
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features="></script>
+        
+        
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0.3s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+    <div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+        <div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+            <div>
+                <h2>LOADING...</h2>
+                <p style="word-break:keep-all">加载过慢请开启缓存（浏览器默认开启）</p>
+                <div>
+                    <img alt="loading" src="/loading.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="showpage" style="display: -not-none">
+                    <div id="menushow">
+                        <nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">zhrli's Blog</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menushow" id="phone-menu">
+        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
+        <div class="title" @click="menushow = !menushow">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;zhrli's Blog</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menushow">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                    </div>
+                    <div id="main">
+                        <div class="article">
+    <div>
+        <h1>Matepad Paper使用感受 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2023/7/26
+        </span>
+        
+        <span class="category">
+            <a href="/categories/Essay-Gossip/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                Essay Gossip
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Technology/" style="color: #03a9f4">
+                    Technology
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="HUAWEI-Matepad-Paper使用感受"><a href="#HUAWEI-Matepad-Paper使用感受" class="headerlink" title="HUAWEI Matepad Paper使用感受"></a>HUAWEI Matepad Paper使用感受</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>“华为的产品别买第一代”</p>
+</blockquote>
+<p>自从2022年12月下单起，本人已经深度使用matepad paper近八个月了。对于这一款产品，我认为有太多值得去谈的方面了，于是写了这样一篇文章，分享一下我自己的使用感受。</p>
+<h3 id="价格"><a href="#价格" class="headerlink" title="价格"></a>价格</h3><p>matepad paper首发价为2999元(64g版)，我购买时的价格为2699元。这台墨水屏平板电脑有10.3寸，附带皮套和m-pencil二代笔，这价格看着唬人，其实性价比并不是很低。相比其他厂商发行的相同定位产品，这台平板电脑定价中等，而且搭载了扬声器，使用了麒麟820E芯片，可以说是cpu配置最高的10.3寸墨水屏。华为优质的品控也提高了这款产品的性价比。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/1.jpg" alt="1"></p>
+<h3 id="外观设计"><a href="#外观设计" class="headerlink" title="外观设计"></a>外观设计</h3><p>外观没得说，看上去干净且轻奢；皮套与笔的磁吸设计也方便了多场景使用。但要吐槽的是，皮套上的磁扣设计得过于光滑，以至于太不耐磨，稍一不注意就会留下划痕，影响观感。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/2.jpg" alt="2"></p>
+<p>上图是我被划得千疮百孔的mpp（心疼QAQ</p>
+<h3 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h3><p>相较其他同类产品，mpp使用了全开放安卓系统，这也意味着我们可以随意下载第三方应用。这就给了用户极大的自由空间，也拓宽了应用场景——甚至可以看视频、打游戏。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/3.jpg" alt="3"></p>
+<p>至于效果？最高二十多帧的刷新率可不是闹着玩的。我个人对于这一点还是相当喜欢的，毕竟这款产品可不只是传统的电纸书，开放的系统可以大大提高产品的利用效率。</p>
+<p>mpp目前只更新到了HarmonyOS 2.1.0，相比HarmonyOS 3还是有着很大的差距的，在系统架构、功能上仍可以优化。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/4.jpg" alt="4"></p>
+<p>但鉴于mpp的开发工程师太少（目前只有1个工程师负责维护mpp），产品软件更新十分缓慢：这一点在华为官方论坛上被反映过很多次，但毫无改善，华为对这款产品的重视程度可见一斑。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/5.png" alt="5"></p>
+<h3 id="内置应用"><a href="#内置应用" class="headerlink" title="内置应用"></a>内置应用</h3><p>mpp的<strong>内置应用市场</strong>最大的问题就是应用太少。由于墨水屏还未普及，只有小部分厂家为墨水屏制作了适配性良好的应用，其余很多软件都有着适配性问题，所以得以上架应用市场的软件少之又少。而且作为一个应用商店，它甚至没有搜索、排行等基本功能。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/6.jpg" alt="6"></p>
+<p>mpp的<strong>内置浏览器</strong>功能少之又少，让人不禁怀疑：这真的是为墨水屏适配的软件吗？<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/7.jpg" alt="7"></p>
+<p>这里推荐一款免费开源的墨水瓶浏览器<a target="_blank" rel="noopener" href="https://github.com/plateaukao/einkbro">EinkBro</a>，这才是墨水瓶浏览器该有的样子。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/8.jpg" alt="8"></p>
+<p>mpp的<strong>内置书城</strong>也是同样的问题，资源匮乏。书籍的数量不够，质量也不精，更没有形成阅读社区、阅读论坛，凭什么让消费者买单？<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/9.jpg" alt="9"></p>
+<p>下图为华为阅读会员价格<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/10.jpg" alt="10"></p>
+<p>下图为kindle unlimited价格</p>
+<p><img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/11.png" alt="11"></p>
+<p>要么就学习kindle，多买版权维持高价，使读者方便地获取资源，要么就把会员的价格降下来。定着比kindle KU还高的价格，却只有这几本烂书，谁会花钱买呢？</p>
+<p>mpp的<strong>云同步</strong>功能做得不错，但仅限于使用华为生态。如果只有mpp一个华为设备，那云同步算是废了大半。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/12.jpg" alt="12"></p>
+<p><strong>内置笔记</strong>系统的设计算是及格，该有的功能样样不缺，手写笔的硬件配置也不错。但mpp分屏笔记功能的缺点太多了。首先是十分严重的bug，在阅读中作完勾画后，再分屏进入笔记，阅读中的勾画会移位。解决办法是多翻几页或者来回调一下对比度。这个bug到现在还没有修好，十分严重地影响了使用体验。</p>
+<p>如下图，我把左上角第一句话标画出来了。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/13.jpg" alt="13"></p>
+<p>但切换到分屏笔记后，左上角痕迹移位了。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/14.jpg" alt="14"></p>
+<p>其次是难以截取阅读中的图片粘贴到笔记中，这个功能本应是十分常用的。还有自动画直线、自动图形等功能也没有。</p>
+<p><strong>内置阅读</strong>就有很多不足了。</p>
+<ul>
+<li><p>翻译功能太差了。epub文件勉强有个划词翻译，而且能整页翻译，但翻译质量堪忧；文字版pdf文件压根没有翻译功能。装上个质量高点的 翻译插件难道很难做到吗？</p>
+</li>
+<li><p>阅读笔记功能少。内置笔记与内置阅读的笔记完全不是同一套系统。阅读笔记操作更加简化，只有调节笔头种类、粗细、颜色等功能。而且有一点让我很不舒服，在阅读笔记时点两下笔杆，会先调出菜单，再点一下屏幕才能开始写字&#x2F;擦除。我完全不知道设计者的脑子里装的是什么，能想出这种逆天操作。<img src="/2023/07/26/Matepad%20Paper%E4%BD%BF%E7%94%A8%E6%84%9F%E5%8F%97/15.jpg" alt="15"></p>
+<p>  （上图为点两下笔杆呼出的菜单）</p>
+</li>
+<li><p>对pdf、txt、word等文件格式支持太差。文字版pdf没有横屏显示功能，没有重排版功能，进而没有翻译功能，而txt和word基本没有任何支持。</p>
+</li>
+<li><p>批注功能少。只有横线划线功能，最基础的批注功能都没有，阅读与笔记的串联不够。设计者真的认真考虑目标人群的阅读习惯了吗？</p>
+</li>
+</ul>
+<h3 id="第三方应用"><a href="#第三方应用" class="headerlink" title="第三方应用"></a>第三方应用</h3><p>限于糟糕的屏幕硬件条件，市面上完美适配mpp的应用不多。很多笔记软件，比如OneNote，甚至应用商店中的有道云笔记都出现了字迹卡顿等情况，无法正常使用。</p>
+<p>墨水屏带来了极地的刷新率，进而带来了触屏反馈的不灵敏，这种劣势在遇上第三方应用的广告弹窗时，变得尤为明显。你努力地去戳弹窗上小小的叉号，却因反馈不及时戳到广告，你又使劲从两边向内划想返回，mpp又反应了好久才回到刚刚的界面。这大大打击了用户的体验感。</p>
+<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><p><a target="_blank" rel="noopener" href="https://cn.club.vmall.com/mhw/consumer/cn/community/mhwnews/allcircle/id_10000005/">花粉俱乐部平板专区</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv16495041">墨水屏应用推荐</a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/32957543?spm_id_from=333.337.search-card.all.click">一位做了很多mpp测评视频的up主</a></p>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+                        <footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2023 zhrli&#39;s Blog
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @zhrli
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+
+                    </div>
+                </div>
+            </transition>
+            <div id="showimg">
+                <img id="showimg-content" alt="showimg">
+            </div>
+        </div>
+        <script src="/js/functions.js"></script>
+<script src="/js/particlex.js"></script>
+
+    
+    
+    
+    
+
+
+    </body>
+</html>

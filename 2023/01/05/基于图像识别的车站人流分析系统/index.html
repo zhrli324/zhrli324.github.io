@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>BUPT雏雁：客流通 | Zhrli&#39;s Blog</title>
+        <meta name="author" content="zhrli">
+        <meta name="description" content="欲买桂花同载酒，终不似，少年游。">
+        <meta name="keywords" content="">
+        <link rel="icon" href="ailor.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script>
+        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+        <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css">
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features="></script>
+        
+        
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+    <meta name="generator" content="Hexo 5.4.2"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0.3s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+    <div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+        <div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+            <div>
+                <h2>LOADING...</h2>
+                <p style="word-break:keep-all">加载过慢请开启缓存（浏览器默认开启）</p>
+                <div>
+                    <img alt="loading" src="/loading.gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="showpage" style="display: -not-none">
+                    <div id="menushow">
+                        <nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">zhrli's Blog</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;about</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menushow" id="phone-menu">
+        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
+        <div class="title" @click="menushow = !menushow">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;zhrli's Blog</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menushow">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                    </div>
+                    <div id="main">
+                        <div class="article">
+    <div>
+        <h1>BUPT雏雁：客流通 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2023/1/5
+        </span>
+        
+        <span class="category">
+            <a href="/categories/Others/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                Others
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Getting-Started/" style="color: #00a596">
+                    Getting_Started
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Python/" style="color: #03a9f4">
+                    Python
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Machine-Learning/" style="color: #03a9f4">
+                    Machine_Learning
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="基于图像识别的车站人流分析系统"><a href="#基于图像识别的车站人流分析系统" class="headerlink" title="基于图像识别的车站人流分析系统"></a>基于图像识别的车站人流分析系统</h1><p><em>参考论文：<a target="_blank" rel="noopener" href="https://wwtd.lanzout.com/b047kljqd">https://wwtd.lanzout.com/b047kljqd</a><br>密码:4ibv</em></p>
+<p><em>往年雏雁案例：<a target="_blank" rel="noopener" href="https://wwtd.lanzout.com/b047kljpc">https://wwtd.lanzout.com/b047kljpc</a><br>密码:30fx</em></p>
+<h3 id="一、基于视频传输的图像识别技术"><a href="#一、基于视频传输的图像识别技术" class="headerlink" title="一、基于视频传输的图像识别技术"></a>一、基于视频传输的图像识别技术</h3><h5 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h5><ul>
+<li>语言基础语法的入门</li>
+<li>Python类与对象的初步了解</li>
+<li>机器学习环境的配置</li>
+<li>库与框架的调用</li>
+</ul>
+<h5 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h5><ul>
+<li>本项目使用Paddlepaddle(百度飞桨)框架。飞桨有较为完善的生态，针对不同硬件环境提供了丰富的支持方案。飞桨作为一个开源框架，生态由百度自身主导，相比开发者主导的生态，代码风格更加稳定标准。<ul>
+<li>环境配置（<a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/documentation/docs/zh/install/index_cn.html">官方文档</a>有说明）</li>
+<li>基础库函数入门</li>
+<li>本人写的总结博客<a href="https://zhrli324.github.io/2023/01/07/PaddleDetection%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E8%B8%A9%E5%9D%91%E7%BB%8F%E9%AA%8C/">PaddleDetection的配置及踩坑经验</a></li>
+</ul>
+</li>
+</ul>
+<h5 id="数据集与训练模型"><a href="#数据集与训练模型" class="headerlink" title="数据集与训练模型"></a>数据集与训练模型</h5><ul>
+<li>本项目借用以下训练模型</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleDetection">PaddleDetection</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=12" title="PP-Vehicle">车辆检测模型</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=7" title="PP-YOLOv2">物体检测模型</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=10" title="PP-TinyPose">人体姿态检测模型</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.paddlepaddle.org.cn/modelsDetail?modelId=11" title="PP-HumanV2">行人场景检测模型</a>(自测这个效果不错)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="二、视频数据的获取"><a href="#二、视频数据的获取" class="headerlink" title="二、视频数据的获取"></a>二、视频数据的获取</h3><h5 id="怎样获取视频数据？"><a href="#怎样获取视频数据？" class="headerlink" title="怎样获取视频数据？"></a>怎样获取视频数据？</h5><p>从互联网上获取道路行人往来的视频，或者前往学校附近的道路上采集不同客流量的视频。要保证数据集的多样性，保证其中有人群稀疏较易分辨的视频和人群交织较难统计的视频，以便于测试系统的识别和统计能力。</p>
+<h5 id="怎样将视频数据传入到AI模型中？"><a href="#怎样将视频数据传入到AI模型中？" class="headerlink" title="怎样将视频数据传入到AI模型中？"></a>怎样将视频数据传入到AI模型中？</h5><p>AI模型会动态地识别视频中的行人，通过识别行人的某些特征，将视频信息转换为数据信息交由AI进行处理。同时会根据视频每帧之间人物的行为变化程度来判断行人的移动速度等精细化信息。</p>
+<h5 id="怎样加快数据传输与模型分析的速度？"><a href="#怎样加快数据传输与模型分析的速度？" class="headerlink" title="怎样加快数据传输与模型分析的速度？"></a>怎样加快数据传输与模型分析的速度？</h5><hr>
+<h3 id="三、数据统计与分析系统"><a href="#三、数据统计与分析系统" class="headerlink" title="三、数据统计与分析系统"></a>三、数据统计与分析系统</h3><h5 id="用什么平台存储视频数据？"><a href="#用什么平台存储视频数据？" class="headerlink" title="用什么平台存储视频数据？"></a>用什么平台存储视频数据？</h5><p>（暂未确定）</p>
+<h5 id="怎样建立客流量分析模型？"><a href="#怎样建立客流量分析模型？" class="headerlink" title="怎样建立客流量分析模型？"></a>怎样建立客流量分析模型？</h5><p>先对数据进行数据预处理。</p>
+<p>对每一个站台，建立相应的特征数据，如：出站人数、进站人数、站台车次等。</p>
+<p>对空值的处理：如果某个属性缺失值比较多，对于构造数据特征没有什么帮助，就将它去掉。如果缺失的不是特别多，且属性是连续的数值型，则可以根据已有的特征训练一个模型，通过拟合把缺失的数据补充上，或者把连续值分段离散化后把空值作为一个属性值；如果是离散型，可以尝试直接把空值作为一个属性值。</p>
+<p>建立各个因素对客流量以及未来客流量预测结果的影响。先进行头脑风暴，猜测会影响客流的因素，然后对数据进行实际的分析。直观的感觉影响因素有：星期几、是否是节假日、线路的站数、线路类型、各线路之间的联通关系、某个站台上一站或几站的客流。利用这些数据建立一个拟合模型，用于预测未来一段时间的各站台客流量。可以利用软件绘制图像，更加直观地得出人数变化特征。</p>
+<h5 id="用户们最关心哪些交通问题？用哪些数据反映？"><a href="#用户们最关心哪些交通问题？用哪些数据反映？" class="headerlink" title="用户们最关心哪些交通问题？用哪些数据反映？"></a>用户们最关心哪些交通问题？用哪些数据反映？</h5><p>交通拥挤程度、到达目的地的时间、最短路线、交通方式等。</p>
+<p>可以用沿途的客流密度、客流流向、各交通线路的运行状态等来反映。</p>
+<h5 id="怎样给用户提出出行建议？"><a href="#怎样给用户提出出行建议？" class="headerlink" title="怎样给用户提出出行建议？"></a>怎样给用户提出出行建议？</h5><p>结合对数据的分析，计算得到到达目的地可能的最短时间以及对应路线，并显示给用户。</p>
+<hr>
+<h3 id="四、平台与展示"><a href="#四、平台与展示" class="headerlink" title="四、平台与展示"></a>四、平台与展示</h3><h5 id="微信小程序开发"><a href="#微信小程序开发" class="headerlink" title="微信小程序开发"></a>微信小程序开发</h5><p>后续会进行微信小程序的设计与开发，帮助用便捷地获取交通客流信息</p>
+<h5 id="宣传视频制作"><a href="#宣传视频制作" class="headerlink" title="宣传视频制作"></a>宣传视频制作</h5><ul>
+<li>后续会制作视频宣传本产品</li>
+<li>优秀示例：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dT4y1L73Z/?vd_source=9cc21b4b3b3f8f59f0307e7d8f8e74d5">北邮雏雁计划展示视频</a></li>
+</ul>
+<h5 id="宣传PPT制作"><a href="#宣传PPT制作" class="headerlink" title="宣传PPT制作"></a>宣传PPT制作</h5><h3 id="五、现有成果"><a href="#五、现有成果" class="headerlink" title="五、现有成果"></a>五、现有成果</h3><h5 id="目前小组成员均已学习并熟悉Python语言的基础语法，了解Python的特性及Python环境的配置、库的调用"><a href="#目前小组成员均已学习并熟悉Python语言的基础语法，了解Python的特性及Python环境的配置、库的调用" class="headerlink" title="目前小组成员均已学习并熟悉Python语言的基础语法，了解Python的特性及Python环境的配置、库的调用"></a>目前小组成员均已学习并熟悉Python语言的基础语法，了解Python的特性及Python环境的配置、库的调用</h5><h5 id="目前小组在第一节的技术方面取得了可行性"><a href="#目前小组在第一节的技术方面取得了可行性" class="headerlink" title="目前小组在第一节的技术方面取得了可行性"></a>目前小组在第一节的技术方面取得了可行性</h5><h5 id="未来将继续顺着思路学习、研究接下来的内容"><a href="#未来将继续顺着思路学习、研究接下来的内容" class="headerlink" title="未来将继续顺着思路学习、研究接下来的内容"></a>未来将继续顺着思路学习、研究接下来的内容</h5>
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+                        <footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2023 zhrli&#39;s Blog
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @zhrli
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> & <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        
+    </div>
+</footer>
+
+                    </div>
+                </div>
+            </transition>
+            <div id="showimg">
+                <img id="showimg-content" alt="showimg">
+            </div>
+        </div>
+        <script src="/js/functions.js"></script>
+<script src="/js/particlex.js"></script>
+
+    
+    
+    
+    
+
+
+    </body>
+</html>
