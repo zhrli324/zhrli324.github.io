@@ -28,36 +28,36 @@ My research interests include Trustworthy AI, especially in LLM Safety, LLM-base
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='docs/RLEdit.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='_pages/docs/RLEdit.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Reinforced Lifelong Editing for Language Models](docs/Reinforced_Lifelong_Editing_for_Language_Models.pdf)
 
-**Zherui Li**\*, Houcheng Jiang\*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang, Xiang Wang
+<u>Zherui Li</u>\*, Houcheng Jiang\*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang, Xiang Wang
 
 [**arxiv**](https://arxiv.org/abs/2502.05759) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u-x6o8ySG0sC'></span></strong>
 - We propose RLEdit, a hypernetwork-based lifelong model editing method that achieves both effectiveness and efficiency.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='docs/Corba.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='_pages/docs/Corba.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](docs/Contagious_Blocking_Attacks_in_Multi_Agent_System.pdf)
 
-Zhenhong Zhou\*, **Zherui Li**\*, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu, Qing Guo
+Zhenhong Zhou\*, <u>Zherui Li</u>\*, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu, Qing Guo
 
 [**arxiv**](https://arxiv.org/abs/xxxx) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - We present a blocking attack against an LLM-based multi-agent system that can degrade its availability and reveal vulnerabilities in the existing framework.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='docs/Multi-Turn.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='_pages/docs/Multi-Turn.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Speak Out of Turn: Safety Vulnerability of Large Language Models in Multi-turn Dialogue](docs/Speak_Out_of_Turn__Safety_Vulnerability_of_Large_Language_Models_in_Multi_turn_Dialogue.pdf)
 
-Zhenhong Zhou, Jiuyang Xiang, Haopeng Chen, **Zherui Li**, Ting Yang, Quan Liu, Sen Su
+Zhenhong Zhou, Jiuyang Xiang, Haopeng Chen, <u>Zherui Li</u>, Ting Yang, Quan Liu, Sen Su
 
 [**arxiv**](https://arxiv.org/abs/2402.17262) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u5HHmVD_uO8C'></span></strong>
 - This paper expose vulnerabilities of LLMs in complex scenarios involving multi-turn dialogue.
