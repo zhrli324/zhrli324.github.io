@@ -42,12 +42,12 @@ My research interests include Trustworthy AI, especially in LLM Safety, LLM-base
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='_pages/docs/Corba.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-
-[Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](docs/Contagious_Blocking_Attacks_in_Multi_Agent_System.pdf)
+[CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](docs/Contagious_Blocking_Attacks_in_Multi_Agent_System.pdf)
 
 Zhenhong Zhou\*, <u>Zherui Li</u>\*, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu, Qing Guo
 
-[**arxiv**](https://arxiv.org/abs/xxxx) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**arxiv**](https://arxiv.org/abs/2502.14529) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+
 - We present a blocking attack against an LLM-based multi-agent system that can degrade its availability and reveal vulnerabilities in the existing framework.
 </div>
 </div>
