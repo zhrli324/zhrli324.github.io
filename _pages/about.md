@@ -61,12 +61,12 @@ My research interests include **Trustworthy and Easy-to-use AI**, especially in:
 
 <u>Zherui Li</u>\*, Houcheng Jiang\*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang†, Xiang Wang†
 
-[**ICML'25**](https://arxiv.org/abs/2502.05759) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u-x6o8ySG0sC'></span></strong>
+[**arxiv**](https://arxiv.org/abs/2502.05759) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u-x6o8ySG0sC'></span></strong>
 - We propose RLEdit, a hypernetwork-based lifelong model editing method that achieves both effectiveness and efficiency.
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='_pages/docs/Corba.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML'25</div><img src='_pages/docs/Corba.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](docs/Contagious_Blocking_Attacks_in_Multi_Agent_System.pdf)
 
