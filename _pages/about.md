@@ -17,13 +17,18 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello!👋 I am a 3rd-year undergraduate student majoring in Computer Science in the School of Future, Beijing University of Posts and Telecommunications.
+Hi!👋
+
+I am a 3rd-year undergraduate student majoring in **Computer Science** in the **School of Future, Beijing University of Posts and Telecommunications**.
 
 My research interests include **Trustworthy and Easy-to-use AI**, especially in:
-* LLM Safety
-* LLM-based Agent
-* LLM Reasoning
-* Model Editing
+* LLM (e.g., Safety, Reasoning, Multimodal)
+* LLM-based Agent (e.g., Security, MAS)
+* Knowledge Mechanisms in Models (e.g., Model Editing, Model Merge)
+
+🔥 I'm seeking **Ph.D.** opportunity for **2026 Fall**!
+
+
 
 
 <!-- # 🔥 News
@@ -40,7 +45,7 @@ My research interests include **Trustworthy and Easy-to-use AI**, especially in:
 
 [**arxiv**](https://arxiv.org/abs/2506.00509) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 
-- We present a blocking attack against an LLM-based multi-agent system that can degrade its availability and reveal vulnerabilities in the existing framework.
+- We introduce MisinfoTask, a dataset to assess the impact of misinformation injection on Multi-Agent Systems, and ARGUS, a universal and adaptive framework designed to defend against this threat.
 </div>
 </div>
 
@@ -50,7 +55,7 @@ My research interests include **Trustworthy and Easy-to-use AI**, especially in:
 
 [Reinforced Lifelong Editing for Language Models](docs/Reinforced_Lifelong_Editing_for_Language_Models.pdf)
 
-<u>Zherui Li</u>\*, Houcheng Jiang\*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang<span>†</span>, Xiang Wang<span>†</span>
+<u>Zherui Li</u>\*, Houcheng Jiang\*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang†, Xiang Wang†
 
 [**arxiv**](https://arxiv.org/abs/2502.05759) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u-x6o8ySG0sC'></span></strong>
 - We propose RLEdit, a hypernetwork-based lifelong model editing method that achieves both effectiveness and efficiency.
@@ -61,7 +66,7 @@ My research interests include **Trustworthy and Easy-to-use AI**, especially in:
 <div class='paper-box-text' markdown="1">
 [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](docs/Contagious_Blocking_Attacks_in_Multi_Agent_System.pdf)
 
-Zhenhong Zhou\*, <u>Zherui Li</u>\*, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu, Qing Guo<span>†</span>
+Zhenhong Zhou\*, <u>Zherui Li</u>\*, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu, Qing Guo†
 
 [**arxiv**](https://arxiv.org/abs/2502.14529) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 
@@ -74,7 +79,7 @@ Zhenhong Zhou\*, <u>Zherui Li</u>\*, Jie Zhang, Yuanhe Zhang, Kun Wang, Yang Liu
 
 [Speak Out of Turn: Safety Vulnerability of Large Language Models in Multi-turn Dialogue](docs/Speak_Out_of_Turn__Safety_Vulnerability_of_Large_Language_Models_in_Multi_turn_Dialogue.pdf)
 
-Zhenhong Zhou, Jiuyang Xiang, Haopeng Chen, <u>Zherui Li</u>, Ting Yang, Quan Liu, Sen Su<span>†</span>
+Zhenhong Zhou, Jiuyang Xiang, Haopeng Chen, <u>Zherui Li</u>, Ting Yang, Quan Liu, Sen Su†
 
 [**arxiv**](https://arxiv.org/abs/2402.17262) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u5HHmVD_uO8C'></span></strong>
 - This paper expose vulnerabilities of LLMs in complex scenarios involving multi-turn dialogue.
