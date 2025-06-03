@@ -30,6 +30,10 @@ My research interests include **Trustworthy and Easy-to-use AI**, especially in:
 
 
 
+# 📖 Educations
+- *2022.09 - 2026.06 (expected)*, **Undergradute**, Computer Science, Beijing University of Posts and Telecommunications, Beijing.
+
+
 
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
@@ -57,7 +61,7 @@ My research interests include **Trustworthy and Easy-to-use AI**, especially in:
 
 <u>Zherui Li</u>\*, Houcheng Jiang\*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang†, Xiang Wang†
 
-[**arxiv**](https://arxiv.org/abs/2502.05759) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u-x6o8ySG0sC'></span></strong>
+[**ICML'25**](https://arxiv.org/abs/2502.05759) <strong><span class='show_paper_citations' data='qcJ5riMAAAAJ:u-x6o8ySG0sC'></span></strong>
 - We propose RLEdit, a hypernetwork-based lifelong model editing method that achieves both effectiveness and efficiency.
 </div>
 </div>
@@ -85,10 +89,6 @@ Zhenhong Zhou, Jiuyang Xiang, Haopeng Chen, <u>Zherui Li</u>, Ting Yang, Quan Li
 - This paper expose vulnerabilities of LLMs in complex scenarios involving multi-turn dialogue.
 </div>
 </div>
-
-
-# 📖 Educations
-- *2022.09 - 2026.06 (expected)*, **Undergradute**, Computer Science, Beijing University of Posts and Telecommunications, Beijing.
 
 
 # 💻 Internships
