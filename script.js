@@ -138,23 +138,37 @@ async function initializeContent() {
         }
     }
 
-    // 更新新闻
-    if (content.news) {
-        const newsContent = document.querySelector('#news .section-content');
-        if (newsContent && content.news.items && Array.isArray(content.news.items)) {
-            newsContent.innerHTML = `
-                <div class="news-container">
-                    ${content.news.items.map(item => `
-                        <div class="news-item">
-                            <span class="date">${item.date || "No Date"}</span>
-                            <p>${item.content || "No Content"}</p>
-                        </div>
-                    `).join('')}
+    // 更新实习
+    if (content.interns) {
+        const internsContent = document.querySelector('#interns .section-content');
+        if (internsContent && content.interns.items && Array.isArray(content.interns.items)) {
+            internsContent.innerHTML = content.interns.items.map(item => {
+                // 学位+专业
+                const degreeMajor = `${item.degree || ''}${item.school ? ' in ' + item.school : ''}`;
+                // 学校logo
+                const logoImg = item.school_logo ? `<img class='school-logo' src='${item.school_logo}' alt='logo'/>` : '';
+                // advisor
+                let advisorHtml = '';
+                if (item.advisor && item.advisor.name) {
+                    if (item.advisor.url) {
+                        advisorHtml = `<p class="advisor">Advisor: <a href='${item.advisor.url}' target='_blank'>${item.advisor.name}</a></p>`;
+                    } else {
+                        advisorHtml = `<p class="advisor">Advisor: ${item.advisor.name}</p>`;
+                    }
+                }
+                return `
+                <div class="interns-item">
+                    <div class="edu-content">
+                        <h3>${degreeMajor} ${logoImg}</h3>
+                        ${advisorHtml}
+                    </div>
+                    <div class="edu-period">${item.period || ""}</div>
                 </div>
-            `;
+                `;
+            }).join('');
         } else {
-            console.warn('content.news.items is missing or not an array.');
-            if (newsContent) newsContent.innerHTML = '<p>News items are currently unavailable.</p>';
+            console.warn('content.interns.items is missing or not an array.');
+            if (internsContent) internsContent.innerHTML = '<p>Intern history is currently unavailable.</p>';
         }
     }
 
@@ -250,9 +264,10 @@ async function initializeContent() {
         const contactGrid = document.querySelector('.contact-grid');
         if (contactGrid && content.contact.items && Array.isArray(content.contact.items)) {
             contactGrid.innerHTML = content.contact.items.map(item => {
+                // 支持所有类型的联系方式多行显示
+                const lines = item.content.split(/\\n|\n/);
+                
                 if (item.type === 'location') {
-                    // 支持多行和时钟
-                    const lines = item.content.split(/\\n|\n/);
                     const clocks = [
                         '<span class="contact-clock" id="clock-beijing"></span>',
                         '<span class="contact-clock" id="clock-indiana"></span>'
@@ -267,12 +282,25 @@ async function initializeContent() {
                         </div>
                     `;
                 } else {
-                    return `
-                        <div class="contact-item">
-                            <i class="${item.icon || ''}"></i>
-                            <p>${item.content || ''}</p>
-                        </div>
-                    `;
+                    // 为其他类型的联系方式（如邮箱）添加多行支持
+                    if (lines.length > 1) {
+                        return `
+                            <div class="contact-item">
+                                <i class="${item.icon || ''}"></i>
+                                <div>
+                                    ${lines.map(line => `<div>${line}</div>`).join('')}
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        // 单行显示保持原样
+                        return `
+                            <div class="contact-item">
+                                <i class="${item.icon || ''}"></i>
+                                <p>${item.content || ''}</p>
+                            </div>
+                        `;
+                    }
                 }
             }).join('');
             // 启动时钟
@@ -293,8 +321,6 @@ async function initializeContent() {
             if (contactGrid) contactGrid.innerHTML = '<p>Contact information is currently unavailable.</p>';
         }
     }
-
-    setAllLinksBlank();
 }
 
 // 主题切换相关
@@ -436,7 +462,7 @@ async function initializeNavigation() {
 
 // 获取并渲染 GitHub 仓库
 async function loadAndRenderGitHubRepos() {
-    const username = 'DripNowhy';
+    const username = 'zhrli324';
     const repoSection = document.querySelector('.github-repo-section');
     if (!repoSection) return;
     repoSection.innerHTML = '<p>Loading repositories...</p>';
