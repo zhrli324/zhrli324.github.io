@@ -27,7 +27,7 @@ research:
 
 ## Interns
 ```yaml
-education:
+interns:
   items:
     - period: "2025.05 - "
       degree: "Research Intern"
@@ -106,10 +106,7 @@ education:
     - period: "2022.09 - 2026.06"
       degree: "B.S."
       school: "School of Future, Beijing University of Posts and Telecommunications"
-      school_logo: "images/bupt_raw.svg"
-      # advisor:
-      #   name: "Dr. Bing Cao"
-      #   url: "https://bcaosudo.github.io/"
+      school_logo: "images/bupt_raw.png"
 ```
 
 ## Contact
@@ -145,9 +142,9 @@ contact:
 3. Icons: Use Font Awesome icon class names
 4. Indentation: Use 2 spaces for indentation 
 
-<!-- ## GitHub Repositories
+## GitHub Repositories
 ```yaml
 github_repos:
   username: "zhrli324"
   auto_sync: true # 自动同步，无需手动维护仓库列表
-```  -->
+``` 
