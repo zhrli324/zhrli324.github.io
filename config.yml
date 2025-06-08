@@ -1,6 +1,6 @@
 # 个人信息
 profile:
-  name: "Zherui Li\n李哲睿"
+  name: "Zherui Li (李哲睿)"
   title: "Undergraduate"
   department: "Computer Science"
   university: "BUPT"
@@ -17,13 +17,13 @@ social:
     icon: "fab fa-github"
     title: "GitHub"
   # twitter:
-  #   url: "https://x.com/YiDingywhy"
+  #   url: "https://x.com/xxx"
   #   icon: "fab fa-twitter"
   #   title: "Twitter"
-  cv:
-    url: "pdf/CV.pdf"
-    icon: "cv-svg-icon"
-    title: "CV"
+  # cv:
+  #   url: "pdf/CV.pdf"
+  #   icon: "cv-svg-icon"
+  #   title: "CV"
   email:
     url: "mailto:zhrli324@gmail.com"
     icon: "fas fa-envelope"

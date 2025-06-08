@@ -813,7 +813,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .school-logo {
-    height: 1.25em;
+    height: 3em;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    margin-bottom: 0.15em;
+}
+
+.intern-logo {
+    height: 3em;
     vertical-align: middle;
     margin-left: 0.5em;
     margin-bottom: 0.15em;

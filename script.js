@@ -146,7 +146,7 @@ async function initializeContent() {
                 // 学位+专业
                 const degreeMajor = `${item.degree || ''}${item.school ? ', ' + item.school : ''}`;
                 // 学校logo
-                const logoImg = item.school_logo ? `<img class='school-logo' src='${item.school_logo}' alt='logo'/>` : '';
+                const logoImg = item.school_logo ? `<img class='intern-logo' src='${item.school_logo}' alt='logo'/>` : '';
                 // advisor
                 let advisorHtml = '';
                 if (item.advisor && item.advisor.name) {
