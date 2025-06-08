@@ -3,14 +3,14 @@
 ## About Me
 ```yaml
 about:
-  content: |
+  content:
     Hi!👋
 
-    I am a 3rd-year undergraduate student at <strong>Beijing University of Posts and Telecommunications</strong> <img src="images/bupt.png" alt="BUPT Logo" style="height:1em; vertical-align:middle;">.
+    I am a 3rd-year undergraduate student at <strong>Beijing University of Posts and Telecommunications</strong> <img src="images/bupt.png" alt="BUPT Logo" style="height:3em; vertical-align:middle;">.
 
     My research interests lie in developing <strong>Trustworthy and Easy-to-use AI</strong>.
 
-    🔥 I'm seeking **Ph.D.** opportunity for **2026 Fall**!
+    <strong>🔥 I'm seeking Ph.D. opportunity for 2026 Fall!</strong>
 ```
 
 ## Research Interests
@@ -65,7 +65,7 @@ publications:
       image: "images/ARGUS.png"
       links:
         paper: "https://arxiv.org/abs/2506.00509"
-        # code: "https://github.com/DripNowhy/Sherlock"
+        code: "https://github.com/zhrli324/ARGUS"
     - year: "2025"
       title: "Reinforced Lifelong Editing for Language Models"
       authors: "<u>Zherui Li</u>*, Houcheng Jiang*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang†, Xiang Wang†"
@@ -75,7 +75,7 @@ publications:
       image: "images/RLEdit.png"
       links:
         paper: "https://arxiv.org/abs/2502.05759"
-        # code: "https://github.com/DripNowhy/MIS"
+        code: "https://github.com/zhrli324/RLEdit"
         # project: "https://dripnowhy.github.io/MIS/"
     - year: "2025"
       title: "CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models"
@@ -86,7 +86,7 @@ publications:
       image: "images/Corba.png"
       links:
         paper: "https://arxiv.org/abs/2502.14529"
-        # code: "https://github.com/DripNowhy/ETA"
+        code: "https://github.com/zhrli324/Corba"
         # project: "https://dripnowhy.github.io/ETA.html"
     - year: "2024"
       title: "Speak Out of Turn: Safety Vulnerability of Large Language Models in Multi-turn Dialogue"
@@ -97,7 +97,6 @@ publications:
       image: "images/Multi-Turn.png"
       links:
         paper: "https://arxiv.org/abs/2402.17262"
-        # code: "https://github.com/Yinan-Xia/TTD"
 ```
 
 ## Education
@@ -119,7 +118,7 @@ contact:
   items:
     - type: "email"
       icon: "fas fa-envelope"
-      content: "zhrli324@gmail.com"
+      content: "zhrli324@gmail.com\nzhrli@bupt.edu.cn"
     - type: "location"
       icon: "fas fa-map-marker-alt"
       content: "Beijing, China"
@@ -146,9 +145,9 @@ contact:
 3. Icons: Use Font Awesome icon class names
 4. Indentation: Use 2 spaces for indentation 
 
-## GitHub Repositories
+<!-- ## GitHub Repositories
 ```yaml
 github_repos:
   username: "zhrli324"
   auto_sync: true # 自动同步，无需手动维护仓库列表
-``` 
+```  -->
