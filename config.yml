@@ -39,8 +39,8 @@ navigation:
     url: "#research-anchor"
     icon: "fas fa-microscope"
     title: "Research"
-  news:
-    url: "#news-anchor"
+  interns:
+    url: "#interns-anchor"
     icon: "fas fa-newspaper"
     title: "Interns"
   publications:
