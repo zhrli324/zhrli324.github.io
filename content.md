@@ -46,7 +46,7 @@ interns:
     - period: "2024.01 - 2024.10"
       degree: "Research Intern"
       school: "Beijing University of Posts and Telecommunications"
-      school_logo: "images/bupt.svg"
+      school_logo: "images/bupt.jpg"
       advisor:
         name: "Prof. Sen Su"
         url: "https://scholar.google.com/citations?user=JaDhAfsAAAAJ"
@@ -106,7 +106,7 @@ education:
     - period: "2022.09 - 2026.06"
       degree: "B.S."
       school: "School of Future, Beijing University of Posts and Telecommunications"
-      school_logo: "images/bupt.svg"
+      school_logo: "images/bupt.jpg"
 ```
 
 ## Contact
