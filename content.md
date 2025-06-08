@@ -6,7 +6,7 @@ about:
   content:
     Hi!👋
 
-    I am a 3rd-year undergraduate student at <strong>Beijing University of Posts and Telecommunications</strong> <img src="images/bupt.png" alt="BUPT Logo" style="height:3em; vertical-align:middle;">.
+    I am a 3rd-year undergraduate student at <img src="images/bupt.png" alt="BUPT Logo" style="height:4em; vertical-align:middle;">.
 
     My research interests lie in developing <strong>Trustworthy and Easy-to-use AI</strong>.
 
@@ -106,7 +106,7 @@ education:
     - period: "2022.09 - 2026.06"
       degree: "B.S."
       school: "School of Future, Beijing University of Posts and Telecommunications"
-      school_logo: "images/bupt_raw.png"
+      school_logo: "images/bupt.svg"
 ```
 
 ## Contact

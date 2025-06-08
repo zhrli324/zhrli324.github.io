@@ -144,7 +144,7 @@ async function initializeContent() {
         if (internsContent && content.interns.items && Array.isArray(content.interns.items)) {
             internsContent.innerHTML = content.interns.items.map(item => {
                 // 学位+专业
-                const degreeMajor = `${item.degree || ''}${item.school ? ' in ' + item.school : ''}`;
+                const degreeMajor = `${item.degree || ''}${item.school ? ', ' + item.school : ''}`;
                 // 学校logo
                 const logoImg = item.school_logo ? `<img class='school-logo' src='${item.school_logo}' alt='logo'/>` : '';
                 // advisor
