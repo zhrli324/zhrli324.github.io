@@ -18,14 +18,14 @@ about:
 research:
   items:
     - keyword: "Large Language Models"
-      description: "Safety, Reasoning, Multimodal, etc."
+      description: "Reasoning, Safety, Multimodal, etc."
     - keyword: "LLM-based Agent"
-      description: "Security, MAS, etc."
+      description: "Agentic RL, Multi-agent Systems, etc."
     - keyword: "Knowledge Mechanisms in Models"
       description: "Model Editing, Interpretability, etc."
 ```
 
-## Interns
+## Internships
 ```yaml
 interns:
   items:
@@ -56,6 +56,16 @@ interns:
 ```yaml
 publications:
   items:
+    - year: "2025"
+      title: "Jailbreaking Large Language Diffusion Models: Revealing Hidden Safety Flaws in Diffusion-Based Text Generation"
+      authors: "Yuanhe Zhang*, Fangzhou Xie*, Zhenhong Zhou†, <u>Zherui Li</u>, Hao Chen, Kun Wang, Yufei Guo†"
+      journal: "Preprint, arXiv 2025"
+      venue: "Preprint"
+      tldr: "This work reveals that LLDMs are vulnerable to a novel jailbreak attack (PAD) achieving 97% success rates, highlighting serious safety concerns."
+      image: "images/PAD.png"
+      links:
+        paper: "https://arxiv.org/abs/2507.19227"
+        code: "https://github.com/shuita2333/PAD-codes"
     - year: "2025"
       title: "Goal-Aware Identification and Rectification of Misinformation in Multi-Agent Systems"
       authors: "<u>Zherui Li</u>, Yan Mi, Zhenhong Zhou, Houcheng Jiang, Guibin Zhang, Kun Wang, Junfeng Fang"
@@ -91,7 +101,7 @@ publications:
     - year: "2024"
       title: "Speak Out of Turn: Safety Vulnerability of Large Language Models in Multi-turn Dialogue"
       authors: "Zhenhong Zhou, Jiuyang Xiang, Haopeng Chen, <u>Zherui Li</u>, Ting Yang, Quan Liu, Sen Su†"
-      journal: "Preprint, arXiv 2025"
+      journal: "Preprint, arXiv 2024"
       venue: "Preprint"
       tldr: "This paper expose vulnerabilities of LLMs in complex scenarios involving multi-turn dialogue."
       image: "images/Multi-Turn.png"
@@ -115,7 +125,7 @@ contact:
   items:
     - type: "email"
       icon: "fas fa-envelope"
-      content: "zhrli324@gmail.com\nzhrli@bupt.edu.cn"
+      content: "zhrli324@gmail.com"
     - type: "location"
       icon: "fas fa-map-marker-alt"
       content: "Beijing, China"
@@ -147,4 +157,4 @@ contact:
 github_repos:
   username: "zhrli324"
   auto_sync: true # 自动同步，无需手动维护仓库列表
-``` 
+```
