@@ -6,7 +6,7 @@ about:
   content:
     Hi!👋
 
-    I am a 3rd-year undergraduate student at <img src="images/bupt.png" alt="BUPT Logo" style="height:4em; vertical-align:middle;">.
+    I am a 4th-year undergraduate student at <img src="images/bupt.png" alt="BUPT Logo" style="height:4em; vertical-align:middle;">.
 
     My research interests lie in developing <strong>Trustworthy and Easy-to-use AI</strong>.
 
@@ -56,6 +56,16 @@ interns:
 ```yaml
 publications:
   items:
+    - year: "2025"
+      title: "DiffuGuard: How Intrinsic Safety is Lost and Found in Diffusion Large Language Models"
+      authors: "<u>Zherui Li</u>*, Zheng Nie*, Zhenhong Zhou, Yufei Guo, Yue Liu, Yitong Zhang, Yu Cheng, Qingsong Wen, Kun Wang, Jiaheng Zhang"
+      journal: "Preprint, arXiv 2025"
+      venue: "Preprint"
+      tldr: "This paper analyzes the unique jailbreak vulnerabilities of Diffusion LLMs and proposes DiffuGuard, a novel training-free defense framework to mitigate them."
+      image: "images/diffuguard.png"
+      links:
+        paper: "https://arxiv.org/abs/2509.24296"
+        code: "https://github.com/niez233/DiffuGuard"
     - year: "2025"
       title: "Jailbreaking Large Language Diffusion Models: Revealing Hidden Safety Flaws in Diffusion-Based Text Generation"
       authors: "Yuanhe Zhang*, Fangzhou Xie*, Zhenhong Zhou†, <u>Zherui Li</u>, Hao Chen, Kun Wang, Yufei Guo†"
@@ -118,6 +128,10 @@ education:
       school: "School of Future, Beijing University of Posts and Telecommunications"
       school_logo: "images/bupt.jpg"
 ```
+
+<!-- ## Academic Service
+Conference Reviewer:
+- 2024: ICLR -->
 
 ## Contact
 ```yaml
