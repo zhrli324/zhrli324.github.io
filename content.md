@@ -18,9 +18,9 @@ about:
 research:
   items:
     - keyword: "Large Language Models"
-      description: "Reasoning, Safety, Multimodal, etc."
+      description: "Reasoning, Safety, Multimodal, Diffusion LLM, etc."
     - keyword: "LLM-based Agent"
-      description: "Agentic RL, Multi-agent Systems, etc."
+      description: "Agentic AI, Multi-agent Systems, etc."
     - keyword: "Knowledge Mechanisms in Models"
       description: "Model Editing, Interpretability, etc."
 ```
@@ -87,6 +87,16 @@ publications:
       links:
         paper: "https://arxiv.org/abs/2506.00509"
         code: "https://github.com/zhrli324/ARGUS"
+    - year: "2025"
+      title: "LatentEvolve: Self-Evolving Test-Time Scaling in Latent Space"
+      authors: "Guibin Zhang*, Fanci Meng*, Guancheng Wan, <u>Zherui Li</u>, Kun Wang, Zhenfei Yin, Lei Bai, Shuicheng Yan"
+      journal: "Preprint, arXiv 2025"
+      venue: "Preprint"
+      tldr: "We present LatentEvolve, a self-evolving Test-Time Scaling framework inspired by complementary learning systems theory, that enables LLMs to progressively improve reasoning in a fully unsupervised manner."
+      image: "images/latentevolve.png"
+      links:
+        paper: "https://arxiv.org/abs/2509.24771"
+        code: "https://github.com/jins7/LatentEvolve"
     - year: "2025"
       title: "Jailbreaking Large Language Diffusion Models: Revealing Hidden Safety Flaws in Diffusion-Based Text Generation"
       authors: "Yuanhe Zhang*, Fangzhou Xie*, Zhenhong Zhou†, <u>Zherui Li</u>, Hao Chen, Kun Wang, Yufei Guo†"
