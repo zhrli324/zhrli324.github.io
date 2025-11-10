@@ -172,7 +172,7 @@ async function initializeContent() {
         }
     }
 
-    // 更新发表论文
+    // 更新发表论文（支持折叠显示）
     if (content.publications) {
         console.log("开始处理 publications 部分");
         const publicationsContent = document.querySelector('#publications .section-content');
@@ -181,7 +181,7 @@ async function initializeContent() {
         if (publicationsContent && content.publications.items && Array.isArray(content.publications.items)) {
             console.log("Publications 数据:", content.publications.items);
             try {
-                publicationsContent.innerHTML = content.publications.items.map(item => {
+                const itemsHtml = content.publications.items.map(item => {
                     // 高亮作者名 Yi Ding
                     let authors = item.authors || "";
                     authors = authors.replace(/Yi Ding/g, '<span class="highlight-name">Yi Ding</span>');
@@ -210,7 +210,57 @@ async function initializeContent() {
                     </div>
                     `;
                 }).join('');
-                console.log("Publications HTML 更新成功");
+
+                // 构造带折叠容器与按钮的HTML
+                const defaultVisibleCount = 3; // 默认显示前3篇
+                const totalCount = content.publications.items.length;
+                const needsToggle = totalCount > defaultVisibleCount;
+
+                const toggleBtnHtml = needsToggle ? `
+                    <div class="pub-toggle-wrapper">
+                        <button id="pub-toggle-btn" class="pub-toggle-btn" aria-expanded="false">
+                            Show all ${totalCount} publications
+                        </button>
+                    </div>
+                ` : '';
+                
+
+                publicationsContent.innerHTML = `
+                    <div class="pub-list" data-visible-count="${defaultVisibleCount}">
+                        ${itemsHtml}
+                    </div>
+                    ${toggleBtnHtml}
+                `;
+
+                // 初始隐藏多余的项
+                const pubList = publicationsContent.querySelector('.pub-list');
+                const pubItems = Array.from(pubList.querySelectorAll('.publication-item'));
+                if (needsToggle) {
+                    pubItems.forEach((el, idx) => {
+                        if (idx >= defaultVisibleCount) el.classList.add('pub-hidden');
+                    });
+
+                    // 绑定按钮交互
+                    const btn = publicationsContent.querySelector('#pub-toggle-btn');
+                    btn?.addEventListener('click', () => {
+                        const expanded = btn.getAttribute('aria-expanded') === 'true';
+                        if (expanded) {
+                            // 折叠
+                            pubItems.forEach((el, idx) => {
+                                if (idx >= defaultVisibleCount) el.classList.add('pub-hidden');
+                            });
+                            btn.setAttribute('aria-expanded', 'false');
+                            btn.textContent = `Show all ${totalCount} publications`;
+                        } else {
+                            // 展开
+                            pubItems.forEach(el => el.classList.remove('pub-hidden'));
+                            btn.setAttribute('aria-expanded', 'true');
+                            btn.textContent = 'Collapse';
+                        }
+                    });
+                }
+
+                console.log("Publications HTML 更新成功(带折叠)");
             } catch (error) {
                 console.error("生成 publications HTML 时出错:", error);
                 publicationsContent.innerHTML = '<p>生成出版物列表时出错。</p>';

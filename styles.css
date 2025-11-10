@@ -639,6 +639,34 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none !important;
 }
 
+/* Publications toggle */
+.pub-hidden {
+    display: none !important;
+}
+
+.pub-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.pub-toggle-btn {
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.pub-toggle-btn:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-1px);
+}
+
 /* Education Items */
 .education-item {
     display: flex;
