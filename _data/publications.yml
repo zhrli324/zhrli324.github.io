@@ -1,0 +1,27 @@
+main:
+  - title: "DiffuGuard: How Intrinsic Safety is Lost and Found in Diffusion Large Language Models"
+    authors: <u>Zherui Li</u>*, Zheng Nie*, Zhenhong Zhou, Yue Liu, Yitong Zhang, Yu Cheng, Qingsong Wen, Kun Wang†, Yufei Guo†, Jiaheng Zhang
+    conference_short: ICLR'26
+    conference: The 14th International Conference on Learning Representations
+    pdf: https://arxiv.org/pdf/2509.24296
+    code: https://github.com/niez233/DiffuGuard
+    image: ./assets/img/diffuguard.png
+    notes: Poster Presentation
+
+  - title: "Goal-Aware Identification and Rectification of Misinformation in Multi-Agent Systems"
+    authors: <u>Zherui Li</u>, Yan Mi, Zhenhong Zhou, Houcheng Jiang, Guibin Zhang, Kun Wang†, Junfeng Fang†
+    conference_short: ICLR'26
+    conference: The 14th International Conference on Learning Representations
+    pdf: https://arxiv.org/pdf/2506.00509
+    code: https://github.com/zhrli324/ARGUS
+    image: ./assets/img/ARGUS.png
+    notes: Poster Presentation
+
+  - title: "Reinforced Lifelong Editing for Language Models"
+    authors: <u>Zherui Li</u>*, Houcheng Jiang*, Hao Chen, Baolong Bi, Zhenhong Zhou, Fei Sun, Junfeng Fang†, Xiang Wang†
+    conference_short: ICML'25
+    conference: The 42nd International Conference on Machine Learning
+    pdf: https://arxiv.org/pdf/2502.05759
+    code: https://github.com/zhrli324/RLEdit
+    notes: Poster Presentation
+    image: ./assets/img/RLEdit.png
