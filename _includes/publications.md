@@ -1,9 +1,9 @@
-<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+<h2 id="publications" style="margin: 2px 0px -15px;">Selected Publications</h2>
 
 <div class="publications">
 <ol class="bibliography">
 
-<div class="pub-note" style="color:#888;font-size:0.98rem;margin:-1.2rem 0 1.2rem 2.2rem;">* indicates author with equal contribution; † indicates corresponding author</div>
+<div class="pub-note" style="color:#888;font-size:0.98rem;">* indicates author with equal contribution; † indicates corresponding author;</div>
 
 {% for link in site.data.publications.main %}
 
