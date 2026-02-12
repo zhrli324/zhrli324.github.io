@@ -49,5 +49,7 @@
 
 {% endfor %}
 
+<div class="pub-note" style="color:#888;font-size:0.98rem;">For a full list of publications, please visit my <a href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</div>
+
 </ol>
 </div>
