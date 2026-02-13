@@ -4,13 +4,13 @@ layout: homepage
 
 ## About Me
 
-Hi!👋
-
-I am <strong>Zherui</strong>, a final-year undergraduate student from <img src="assets/img/bupt.png" alt="BUPT Logo" style="height:3em; vertical-align:middle;">.
+Hi👋 I am <strong>Zherui</strong>, a final-year undergraduate student from <strong>BUPT</strong> <img src="assets/img/bupt.png" alt="BUPT Logo" style="height:1.6em; vertical-align:middle;">.
 
 My research interests lie in developing <strong>Trustworthy and Easy-to-use AI</strong>.
 
 <strong>🔥 I'm seeking Ph.D. opportunities for Fall 2026 or Spring 2027</strong>
+
+
 
 ## Research
 
