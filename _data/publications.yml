@@ -25,3 +25,12 @@ main:
     code: https://github.com/zhrli324/RLEdit
     notes: Poster Presentation
     image: ./assets/img/RLEdit.png
+
+  - title: "Omni-Safety under Cross-Modality Conflict: Vulnerabilities, Dynamics Mechanisms and Efficient Alignment"
+    authors: Kun Wang*, <u>Zherui Li</u>*, Zhenhong Zhou, Yitong Zhang, Yan Mi, Kun Yang, Yiming Zhang, Junhao Dong, Zhongxiang Sun†, Qiankun Li†, Yang Liu
+    conference_short: Preprint
+    conference: ArXiv preprint
+    pdf: https://arxiv.org/pdf/2602.10161
+    code: https://github.com/zhrli324/omni-safety-research
+    notes: Under review
+    image: ./assets/img/omnisteer.png
