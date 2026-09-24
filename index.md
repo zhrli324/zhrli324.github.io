@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-Hi👋 I am <strong>Zherui Li (李哲睿)</strong>, an incoming PhD student at <strong style="color:#C43740;">NTU</strong>
+Hi👋 I am <strong>Zherui Li (李哲睿)</strong>, a PhD student at <strong style="color:#C43740;">NTU</strong>
 <img src="assets/img/ntu.png" alt="NTU Logo" style="height:1.6em; vertical-align:middle;">,
 collaborating with <a href="https://sites.google.com/view/wyb" style="color:#6f42c1;"><strong>Prof. Wei Yang Bryan Lim</strong></a>.
 Before that, I received my BEng in Computer Science from
